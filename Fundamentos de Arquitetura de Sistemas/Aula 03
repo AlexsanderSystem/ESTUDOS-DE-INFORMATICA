@@ -1,0 +1,238 @@
+PROFESSOR: RAFAEL GALLEANI
+SENIOR DEVELOPER - NEXT ENGINEERING
+
+
+XML
+<--! TAGS DO XLM !-->
+<endereço> 
+ <cep>9999-99</cep>
+ <bairro>Jardim Paulista</bairro>
+ <logradouro>Av. Paulista</logradouro>
+ <cidade>São Paulo</cidade>
+ <numero>99</numero>
+ </endereço>
+
+ Json
+
+ {
+     "endereço": {
+         "cep": "99999-99",
+         "logradouro": "Av.Paulista",
+         "bairro": "Jardim Paulista",
+         "cidade": "São Paulo",
+         "numero": 99
+     }
+ }
+
+
+ VANTAGENS
+
+- Linguagem comum Facil de programar
+- Integração 
+- Reutilização de implementação
+- Segurança IntraNet Servidor de Banco de Dados
+- Custos Não a necessidade de muita manuntenção, solução para todos
+
+ PRINCIPAIS TECNOLOGIAS
+
+- SOAP
+- REST
+- XLM
+- JSON 
+
+ Fundamentos de Arquitetura de Sistemas
+
+ Estrutura SOAP
+
+ OBJETIVOS
+
+- O que é SOAP
+- as vantagens de se utilizar SOAP
+- o que é XML
+- Entender a estrutura de uma mensagem SOAP
+
+ SOAP
+
+- SOAP - Simple object Acess Protocol 
+- É um protocolo baseado em XML para acessar serviços web principalmente por HTTP.
+- Pode-se dizer que SOAP é uma definição de como serviços web se comunicam.
+- Foi desenvolvido para facilitar integrações entre aplicações.
+
+ VANTAGENS
+
+- Permite integrações entre aplicações, independente de linguagem, pois usa como linguagem comum o XML.
+- É independete de plataforma ou software.
+- Meio de transporte Genérico, ou seja, pode ser usados por outros protocolos além do HTTP.
+
+ XML
+
+- XML - Extensible Markup Language
+- é Uma linguagem de marcação criada na década de 90 pelo W3C
+- Facilita a separação de conteúdo
+- Não tem limite de criação de TAGS
+- Linguagem comum para integrações entre aplicações
+
+ ESTRUTURA DO SOAP 
+
+- O "SOAP MESSAGE" possui uma estrutura única que deve sempre ser seguida.
+
+- SOAP ENVELOPE > SOAP HEADER > SOAP BODY
+ 
+- SOAP Envelope é o primeiro elemento de documento e é usado para encapsular toda a mensagem SOAP.
+- SOAP Header é o elemento onde possui informações de atributos e metadados de requisição.
+- SOAP Body é o elemento que contém os detalhes da mensagem 
+
+ MENSAGEM SOAP 
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+ <soap:Header>
+ </soap:Header>
+  <soap:Body>
+   <m:MetodoEndereco xmlns:m="http://www.example.org/endereco">
+    <m:Cidade>Rio de Janeiro</m:Cidade>
+    <m:CEP>9999-99</m:CEP>
+    <m:Logradouro>Avenida Atlântida</m:Logradouro>
+    <m:Numero>99</m:Numero>
+   </m:Endereco>
+  <soap:Body>
+</soap:Envelope>
+
+ ENTENDENDO OQUE É WSDL E XSD 
+
+- O que é um WSDL
+- O que é um XSD
+- SOAP na prática
+
+ WSDL
+
+- WSDL - Web Services Description Language.
+- Usado para descrever Web Services, funciona como um contrato de serviço.
+- A descrição é feito em um documento XML, onde é descrito o serviço, especificações de acesso, operações e métodos. 
+
+XSD
+
+- XSD - XML Schema Definition
+- É um schema no formato XML usado para definir a estrutura de dados que será validada em XML
+- o XSD funciona como uma documentação de como deve ser montado o SOAP Message (XML) que será enviado através de Web Service.
+
+
+SOAPUI 
+
+http://soapclient.com/xml/soapresponder.wsdl
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.SoapClient.com/xml/SoapResponder.wsdl" xmlns:xsd1="http://www.SoapClient.com/xml/SoapResponder.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+   <SOAP-ENV:Body>
+      <mns:Method1Response SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mns="http://www.SoapClient.com/xml/SoapResponder.xsd">
+         <bstrReturn xsi:type="xsd:string">Your input parameters are Teste and Teste 2</bstrReturn>
+      </mns:Method1Response>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+RESULTADO DO TESTE DA AULA ACIMA.
+
+ Aprenda o que é REST, API e JSON
+
+- o que é REST
+- Vantagens em se utilizar REST
+- O que é API
+- Entendendo os métodos utilizados pelo REST
+- Estrutura de um REST
+- Estrutura de um JSON
+
+ REST
+
+- REST - Representational State Transfer. "Transferência de Estado Representacional"
+- É um estilo de arquitetura de software que define a implementação de um serviço web. Designer de Arquitetura para serviço WEB.
+- Podem trabalhar com os formatos XML, JSON ou outros. Emel, Texto Puro.....
+
+ VANTAGENS
+
+- Permite integrações entre aplicações e também entre cliente e servidor em páginas web e aplicações.
+- Utiliza método HTTP para definir operação que está sendo efetuada.
+- Arquitetura de muito facil compreensão.
+
+Estrutura do REST
+
+- Cliente>: Pode ser outro aplicação integrando, aplicativo de celular integrando, faz uma requisição HTTP (GET, POST, PUT, DELETE...)
+- Servidor>: Retorna um código de operação. Retorna mensagem (Texto, Json, XML....)
+
+Quando outra aplicação web disponibiliza um conjunto de rotinas e padroes para serviços web podemos chamar este serviço de API
+
+ API
+
+- API - Application Programming Interface.
+- São conjuntos de rotinas documentadas e disponibilizados por uma aplicação para que outras aplicações possam consumir suas funcionalidades.
+- Ficou popular com o aumento dos serviços web.
+- As Maiores plataformas de tecnologia disponibilizam APIs para acessos de suas funcionalidade, algumas delas são: Facebook, Twitter, Telegram, Whatsapp e Github.
+
+ PRINCIPAIS METODOS HTTP
+
+- GET - Solicita a representação de um recurso
+- POST - Solicita a criação de um recurso
+- DELETE - Solicita a exclusão de um recurso
+- PUT - Solicita a atualização de um recurso
+
+ JSON
+
+- JSON - JavaScript Objetct Notation.
+- Formatação leve utilizada para troca de mensagens entre sistemas.
+- Usa-se de uma estrutura de chave e valor e também de listas ordenadas.
+- Um dos formatos mais utilizados e populares para troca de mensagens entre sistemas.
+
+ ESTRUTURA BASICA JSON
+
+{
+   "nome": "Os Vingadores",
+   "ano_lancamento": "2019",
+   "personagens":[
+      {
+         "nome": "Thanos"
+      },
+      {
+         "nome": "Homem de Ferro"
+      },
+      {
+         "nome": "Thor"
+      }
+   ]
+}
+
+Veja sobre integração com REST e métodos HTTP na prática.
+
+OBJETIVOS 
+
+- Integração com serviços REST
+- Métodos HTTP na prática 
+- Código de Estado HTTP 
+
+CÓDIGO DE ESTADO 
+
+- Usado pelo Servidor para avisar o cliente sobre o estado da operação solicitada
+- 1xx - Informativo > Requisição de processo e aviso sem resposta, sem garantia
+- 2xx - Sucesso > Solicitação foi recebida e processada com sucesso
+- 3xx - Redirecionamento > Usuario faz requisição de alteração 
+- 4xx - Erro do Cliente > Quem fez a requisição colocou alguma informação incorreta EXEMPLO: "404 NOT FOUND",
+- 5xx - Erro do Servidor > Na hora de processar pode enviar um aviso notificando o suporte.
+
+Respostas de informação (100-199),
+Respostas de sucesso (200-299),
+Redirecionamentos (300-399)
+Erros do cliente (400-499)
+Erros do servidor (500-599).
+
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+
+Informações dos erros ESTADOS
+
+
+Aula Pratica usando o Postman...
+
+Observando como funciona os comandos.
+
+
+
+
+
+
+
+
