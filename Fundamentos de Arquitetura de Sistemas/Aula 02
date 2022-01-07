@@ -1,235 +1,191 @@
-PROFESSOR: RAFAEL GALLEANI
-SENIOR DEVELOPER - NEXT ENGINEERING
+PROFESSOR: Jefferson Stachelski 
+ENGENHEIRO DE SOFTWARE
+ALUNO: https://github.com/AlexsanderSystem/AlexsanderSystem
 
+LINKS : 
 
-XML
-<--! TAGS DO XLM !-->
-<endereço> 
- <cep>9999-99</cep>
- <bairro>Jardim Paulista</bairro>
- <logradouro>Av. Paulista</logradouro>
- <cidade>São Paulo</cidade>
- <numero>99</numero>
- </endereço>
+TUDO SOBRE MESSAGE BROKERS
+https://www.ibm.com/br-pt/cloud/learn/message-brokers
 
- Json
 
- {
-     "endereço": {
-         "cep": "99999-99",
-         "logradouro": "Av.Paulista",
-         "bairro": "Jardim Paulista",
-         "cidade": "São Paulo",
-         "numero": 99
-     }
- }
+Fundamentos de arquitetura de sistemas
 
+Conceito de Arquitetura em aplicações de internet
 
- VANTAGENS
+OBJETIVOS
 
-- Linguagem comum Facil de programar
-- Integração 
-- Reutilização de implementação
-- Segurança IntraNet Servidor de Banco de Dados
-- Custos Não a necessidade de muita manuntenção, solução para todos
+1. Tipos De Arquitetura
+2. Comparativo entre os tipos de arquitetura
+3. Gerenciamento de erros e volume de acesso
 
- PRINCIPAIS TECNOLOGIAS
+REQUISITOS BÁSICOS
 
-- SOAP
-- REST
-- XLM
-- JSON 
+- Conhecimento básico sobre protocolo - HTTP e proxy:
+Como funciona, oque é proxy.
+- Entendimento sobre RestAPI:
+Como funciona, oque é RestAPI.
+- Conhecimento sobre Docker:
+Sistema de Container, nodes, cluster, ter conhecimento básico. (Docker Sworn)
+- Saber programar
+Básico de programação, prótocolos. 
 
- Fundamentos de Arquitetura de Sistemas
+[FASE-1]
 
- Estrutura SOAP
+1. Arquitetura de MONOLITO
 
- OBJETIVOS
+1º EXEMPLO           
+                    [SERVIDOR]
+                   [APLICAÇÃO#1]                 [WEBAPP*5]
+[BANCO-DE-DADOS] < [APLICAÇÃO#2] < [PROXY-HTTP]  <  
+                   [APLICAÇÃO#3]                 [MOBILE*5]
 
-- O que é SOAP
-- as vantagens de se utilizar SOAP
-- o que é XML
-- Entender a estrutura de uma mensagem SOAP
+SERVIDOR: Com varias demandas é necessario mais de uma aplicação para suprir altas demandas. 
 
- SOAP
+2. Arquitetura de Microserviços #1
 
-- SOAP - Simple object Acess Protocol 
-- É um protocolo baseado em XML para acessar serviços web principalmente por HTTP.
-- Pode-se dizer que SOAP é uma definição de como serviços web se comunicam.
-- Foi desenvolvido para facilitar integrações entre aplicações.
 
- VANTAGENS
+                                CLUSTER
 
-- Permite integrações entre aplicações, independente de linguagem, pois usa como linguagem comum o XML.
-- É independete de plataforma ou software.
-- Meio de transporte Genérico, ou seja, pode ser usados por outros protocolos além do HTTP.
+  [SERVIÇO-EXTERNO]     [NODO]
+                        [SERVIÇO]                                    [WEBAPP*5]
+                                [NODO-2]
+  [BANCO-DE-DADOS-1]            [SERVIÇO-2]    <  [PROXY-HTTP]  <
+                                          [NODO-3]
+  [BANCO-DE-DADOS-2]                      [SERVIÇO-3]                [MOBILE*5]
 
- XML
+SERVIÇOS: Com vários serviços é muito cuidado com as complexidades de quantidade de serviços, serviços comunica entre si. 
 
-- XML - Extensible Markup Language
-- é Uma linguagem de marcação criada na década de 90 pelo W3C
-- Facilita a separação de conteúdo
-- Não tem limite de criação de TAGS
-- Linguagem comum para integrações entre aplicações
+3. Arquitetura de Microserviços #2
 
- ESTRUTURA DO SOAP 
 
-- O "SOAP MESSAGE" possui uma estrutura única que deve sempre ser seguida.
+                                CLUSTER
 
-- SOAP ENVELOPE > SOAP HEADER > SOAP BODY
- 
-- SOAP Envelope é o primeiro elemento de documento e é usado para encapsular toda a mensagem SOAP.
-- SOAP Header é o elemento onde possui informações de atributos e metadados de requisição.
-- SOAP Body é o elemento que contém os detalhes da mensagem 
+  [SERVIÇO-EXTERNO]     [NODO]
+                        [SERVIÇO)]                                    [WEBAPP*5]
+                                [NODO-2]
+  [MESSAGE-BROKER]              [(SERVIÇO-2)]  <  [PROXY-HTTP]  <
+                                          [NODO-3]
+  [BANCO-DE-DADOS]                        [(SERVIÇO-3)]                [MOBILE*5]
 
- MENSAGEM SOAP 
+CORRETOR DE MENSAGEM = "MESSAGE BROKER": trocar de tecnologia sem impactio negativo, pega todas mensagens gerada no passado. 
 
-<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
- <soap:Header>
- </soap:Header>
-  <soap:Body>
-   <m:MetodoEndereco xmlns:m="http://www.example.org/endereco">
-    <m:Cidade>Rio de Janeiro</m:Cidade>
-    <m:CEP>9999-99</m:CEP>
-    <m:Logradouro>Avenida Atlântida</m:Logradouro>
-    <m:Numero>99</m:Numero>
-   </m:Endereco>
-  <soap:Body>
-</soap:Envelope>
+4. Arquitetura de Microserviços #3
 
- ENTENDENDO OQUE É WSDL E XSD 
 
-- O que é um WSDL
-- O que é um XSD
-- SOAP na prática
+                                CLUSTER
 
- WSDL
+                       [GERENCIADO DE PIPELINE]         <       |       |
+                                                                | PROXY |
+   [NODO 1]              [NODO 2]                [NODO 3]       | HTTP  |     [WEBAPP*5]
+  [SERVIÇO 1]           [SERVIÇO 2]             [SERVIÇO 3]     |       |     
+                                                                |       |
+                                                                |       |     [MOBILE*5]
+   [BANCO-DE-DADOS-1]    [SERVIÇO-EXTERNO]       [BANCO-DE-DADOS-2]
 
-- WSDL - Web Services Description Language.
-- Usado para descrever Web Services, funciona como um contrato de serviço.
-- A descrição é feito em um documento XML, onde é descrito o serviço, especificações de acesso, operações e métodos. 
+GERENCIADOR DE PIPELINE: Fora do ar não funciona o sistema. Varios passos para chegar a um resultado, Cada serviço depende de cada banco de dados e serviço externo, menos código possível para evitar bugs e usar tecnologia melhor. Segue os passos para gerenciar respostas ou erros, passando por NODO 1, NODO 2, e NODO 3. Os serviços devem ser lidos no ar para evitar erros, saiba arquiteturar que os serviços saibam corrigir e reverter o erro, como pagamento de usuário por exemplo .              
+                                                                
 
-XSD
+ [FASE-2]
 
-- XSD - XML Schema Definition
-- É um schema no formato XML usado para definir a estrutura de dados que será validada em XML
-- o XSD funciona como uma documentação de como deve ser montado o SOAP Message (XML) que será enviado através de Web Service.
+PROS E CONTRAS MONOLITO
 
+PRÓS
 
-SOAPUI 
+- Baixa Complexidade:
+Apenas um código base é mais facil ser monitorado e várias estâncias.
+- Monitoramento simplificado
 
-http://soapclient.com/xml/soapresponder.wsdl
+CONTRAS
 
-<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.SoapClient.com/xml/SoapResponder.wsdl" xmlns:xsd1="http://www.SoapClient.com/xml/SoapResponder.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
-   <SOAP-ENV:Body>
-      <mns:Method1Response SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mns="http://www.SoapClient.com/xml/SoapResponder.xsd">
-         <bstrReturn xsi:type="xsd:string">Your input parameters are Teste and Teste 2</bstrReturn>
-      </mns:Method1Response>
-   </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>
+- Pilha única:
+Apenas um stack, não pode ser inserir nenhuma outra aplicação.
+- compartilhamento de recursos:
+Modo de checkins maior que o modo financeiro, maior escala de demanda para o sistema com aquele sistema.
+- Acoplamento:
+Base de código, aclopada no mesmo sistema.
+- Mais complexidade e escabilidade:
 
-RESULTADO DO TESTE DA AULA ACIMA.
+Sistema mais facil de escalar >>>
 
- Aprenda o que é REST, API e JSON
+PROS E CONTRAS MICROSERVIÇOS # 1
 
-- o que é REST
-- Vantagens em se utilizar REST
-- O que é API
-- Entendendo os métodos utilizados pelo REST
-- Estrutura de um REST
-- Estrutura de um JSON
+PRÓS
 
- REST
+- Stack dinamica:
+Posso ter microserviços que trabalham com diversas tec.
+- Simples escalabilidade:
+Serviço menor mais rapido e simples, consome menos da máquina e de sobrecarregamento do sistema.
 
-- REST - Representational State Transfer. "Transferência de Estado Representacional"
-- É um estilo de arquitetura de software que define a implementação de um serviço web. Designer de Arquitetura para serviço WEB.
-- Podem trabalhar com os formatos XML, JSON ou outros. Emel, Texto Puro.....
+CONTRAS
 
- VANTAGENS
+- Acoplamento:
+Um serviço fora do ar, quebra todo o sistema.
+- Monitoramento mais complexo:
+Varias aplicações codeBases separadas! modo complexo de monitoramento.
+- Provisionamento mais complexo:
+Orquestrador de Container para rodar cada serviço, adicionando mais serviços tornando muitas informações.
 
-- Permite integrações entre aplicações e também entre cliente e servidor em páginas web e aplicações.
-- Utiliza método HTTP para definir operação que está sendo efetuada.
-- Arquitetura de muito facil compreensão.
 
-Estrutura do REST
+PROS E CONTRAS MICROSERVIÇOS # 2
 
-- Cliente>: Pode ser outro aplicação integrando, aplicativo de celular integrando, faz uma requisição HTTP (GET, POST, PUT, DELETE...)
-- Servidor>: Retorna um código de operação. Retorna mensagem (Texto, Json, XML....)
+PRÓS
 
-Quando outra aplicação web disponibiliza um conjunto de rotinas e padroes para serviços web podemos chamar este serviço de API
+- Stack dinamica:
+Posso ter microserviços que trabalham com diversas tec.
 
- API
+- Simples escabilidade:
+Serviço menor mais rapido e simples, consome menos da máquina e de sobrecarregamento do sistema.
 
-- API - Application Programming Interface.
-- São conjuntos de rotinas documentadas e disponibilizados por uma aplicação para que outras aplicações possam consumir suas funcionalidades.
-- Ficou popular com o aumento dos serviços web.
-- As Maiores plataformas de tecnologia disponibilizam APIs para acessos de suas funcionalidade, algumas delas são: Facebook, Twitter, Telegram, Whatsapp e Github.
+- Desacoplamento:
+Diferentes aplicações e serviços comunincando entre si de uma forma assincrona usando Json, através do MESSAGER BROKER que pode ser EWSqs, kaka ... diferentes. Troca de serviço forma simples.
 
- PRINCIPAIS METODOS HTTP
+CONTRAS
 
-- GET - Solicita a representação de um recurso
-- POST - Solicita a criação de um recurso
-- DELETE - Solicita a exclusão de um recurso
-- PUT - Solicita a atualização de um recurso
+- Monitoramento mais complexo:
+Comunica-se entre os serviços com cada serviço contendo MESSAGER-BROKER, forma de mensagem assincrona, muda o fluxo, e com vários passos para processar dificuldade visualização, o serviço mais importante desas arquitetura é o MESSAGER-BROKER, nunca pode ficar inutil.
 
- JSON
+- Provisionamento mais complexo:
+Open Source, bom monitoramento, conter boa escalabidade, não pode nenhum erro ou ficar fora do ar.
 
-- JSON - JavaScript Objetct Notation.
-- Formatação leve utilizada para troca de mensagens entre sistemas.
-- Usa-se de uma estrutura de chave e valor e também de listas ordenadas.
-- Um dos formatos mais utilizados e populares para troca de mensagens entre sistemas.
 
- ESTRUTURA BASICA JSON
+PROS E CONTRAS MICROSERVIÇOS # 3
 
-{
-   "nome": "Os Vingadores",
-   "ano_lancamento": "2019",
-   "personagens":[
-      {
-         "nome": "Thanos"
-      },
-      {
-         "nome": "Homem de Ferro"
-      },
-      {
-         "nome": "Thor"
-      }
-   ]
-}
+PRÓS
 
-Veja sobre integração com REST e métodos HTTP na prática.
+- Stack dinamica:
+Posso ter microserviços que trabalham com diversas tec.
 
-OBJETIVOS 
+- Simples escabilidade:
+Serviço menor mais rapido e simples, consome menos da máquina e de sobrecarregamento do sistema.
 
-- Integração com serviços REST
-- Métodos HTTP na prática 
-- Código de Estado HTTP 
+- Desacoplamento:
+Diferentes aplicações e serviços comunincando entre si de uma forma assincrona usando Json, através do MESSAGER BROKER que pode ser EWSqs, kaka ... diferentes. Troca de serviço forma simples.
 
-CÓDIGO DE ESTADO 
+- Menor complexidade:
+Saber exatamente o momento que falhou, em que estado estava a informação, mais facil visibilidade da pipeline dessa forma.
 
-- Usado pelo Servidor para avisar o cliente sobre o estado da operação solicitada
-- 1xx - Informativo > Requisição de processo e aviso sem resposta, sem garantia
-- 2xx - Sucesso > Solicitação foi recebida e processada com sucesso
-- 3xx - Redirecionamento > Usuario faz requisição de alteração 
-- 4xx - Erro do Cliente > Quem fez a requisição colocou alguma informação incorreta EXEMPLO: "404 NOT FOUND",
-- 5xx - Erro do Servidor > Na hora de processar pode enviar um aviso notificando o suporte.
+CONTRAS
 
-Respostas de informação (100-199),
-Respostas de sucesso (200-299),
-Redirecionamentos (300-399)
-Erros do cliente (400-499)
-Erros do servidor (500-599).
+- Provisionamento mais complexo:
+Open Source, bom monitoramento, conter boa escalabidade, não pode nenhum erro ou ficar fora do ar.
 
-https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+- Plataforma inteira depende do gerenciador de pipeline:
+Em algum momento tiver alguma falha, ou mensagem de erro, e não sabendo gerenciar aquele erro, pode gerar um estado de inconsciência no sistema. Deve seguir X de passos, caso o passo 4 de erro, os passos 3,2,1 devem conter uma forma de consertar o erro.
 
-Informações dos erros ESTADOS
+ [FASE-3]
 
+Gerenciamento de erros e volume de acesso
 
-Aula Pratica usando o Postman...
+Gerenciamento de erros
 
-Observando como funciona os comandos.
 
+Onde é mais complexo:
+- Processos assíncronos (Microserviços#2)
+- Pipeline
 
+Solução:
+- Dead letter queue
+- Filas de re-tentativas
 
 
 
