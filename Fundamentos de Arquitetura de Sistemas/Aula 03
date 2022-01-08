@@ -1,238 +1,327 @@
-PROFESSOR: RAFAEL GALLEANI
-SENIOR DEVELOPER - NEXT ENGINEERING
+PROFESSOR: Oswaldo Neto
+CTO
 
 
-XML
-<--! TAGS DO XLM !-->
-<endereço> 
- <cep>9999-99</cep>
- <bairro>Jardim Paulista</bairro>
- <logradouro>Av. Paulista</logradouro>
- <cidade>São Paulo</cidade>
- <numero>99</numero>
- </endereço>
+[FASE-1]
 
- Json
+FUNDAMENTOS DE ARQUITETURA DE SISTEMAS
 
- {
-     "endereço": {
-         "cep": "99999-99",
-         "logradouro": "Av.Paulista",
-         "bairro": "Jardim Paulista",
-         "cidade": "São Paulo",
-         "numero": 99
-     }
- }
+Internet das coisas
 
+OBJETIVOS
 
- VANTAGENS
+1. Introdução a internet das coisas
+2. Arquitetura da internet das coisas
+3. Estudo do caso
 
-- Linguagem comum Facil de programar
-- Integração 
-- Reutilização de implementação
-- Segurança IntraNet Servidor de Banco de Dados
-- Custos Não a necessidade de muita manuntenção, solução para todos
+REQUISITOS BÁSICOS
 
- PRINCIPAIS TECNOLOGIAS
+- CLOUD COMPUTING
+- Protocolo de comunicação de rede
+- Processamento e armazenamento de dados
 
-- SOAP
-- REST
-- XLM
-- JSON 
+PROJETO : ARPANET
 
- Fundamentos de Arquitetura de Sistemas
+1969>
+1970>
+1972>
+1977>
 
- Estrutura SOAP
+A REDE MUNDIAL DE COMPUTADORES
 
- OBJETIVOS
-
-- O que é SOAP
-- as vantagens de se utilizar SOAP
-- o que é XML
-- Entender a estrutura de uma mensagem SOAP
-
- SOAP
-
-- SOAP - Simple object Acess Protocol 
-- É um protocolo baseado em XML para acessar serviços web principalmente por HTTP.
-- Pode-se dizer que SOAP é uma definição de como serviços web se comunicam.
-- Foi desenvolvido para facilitar integrações entre aplicações.
-
- VANTAGENS
-
-- Permite integrações entre aplicações, independente de linguagem, pois usa como linguagem comum o XML.
-- É independete de plataforma ou software.
-- Meio de transporte Genérico, ou seja, pode ser usados por outros protocolos além do HTTP.
-
- XML
-
-- XML - Extensible Markup Language
-- é Uma linguagem de marcação criada na década de 90 pelo W3C
-- Facilita a separação de conteúdo
-- Não tem limite de criação de TAGS
-- Linguagem comum para integrações entre aplicações
-
- ESTRUTURA DO SOAP 
-
-- O "SOAP MESSAGE" possui uma estrutura única que deve sempre ser seguida.
-
-- SOAP ENVELOPE > SOAP HEADER > SOAP BODY
+COM O EVENTO DA INTERNET SURGIU OS APLICATIVOS:
  
-- SOAP Envelope é o primeiro elemento de documento e é usado para encapsular toda a mensagem SOAP.
-- SOAP Header é o elemento onde possui informações de atributos e metadados de requisição.
-- SOAP Body é o elemento que contém os detalhes da mensagem 
+Tiktok.
+Facebook.
+Whatsapp.
+Instagram.
+Zoom.
+Snapchat.
+Messenger.
+SnackVideo.
 
- MENSAGEM SOAP 
+Todos usam uma rede mundial conectados constantementes.
+Porque conectar as coisas ?
 
-<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
- <soap:Header>
- </soap:Header>
-  <soap:Body>
-   <m:MetodoEndereco xmlns:m="http://www.example.org/endereco">
-    <m:Cidade>Rio de Janeiro</m:Cidade>
-    <m:CEP>9999-99</m:CEP>
-    <m:Logradouro>Avenida Atlântida</m:Logradouro>
-    <m:Numero>99</m:Numero>
-   </m:Endereco>
-  <soap:Body>
-</soap:Envelope>
+- Embutir sensores em objetos do dia-a-dia
+- Coletar dados dos sensores
+- Usar o dado para tomar decisão 
 
- ENTENDENDO OQUE É WSDL E XSD 
+Conceitos básicos de IoT
 
-- O que é um WSDL
-- O que é um XSD
-- SOAP na prática
+Things > Cloud > Intelligence 
 
- WSDL
+Smart build Exemplo do video. 
+Aqui um exemplo de Smart Build em sistemas
 
-- WSDL - Web Services Description Language.
-- Usado para descrever Web Services, funciona como um contrato de serviço.
-- A descrição é feito em um documento XML, onde é descrito o serviço, especificações de acesso, operações e métodos. 
+"É possível ter a economia de um edifício inteligente em um prédio comum?
+É possível minimizar gastos, com: reaproveitamento da água; substituição de lâmpadas halogênicas por lâmpadas de led – reduzem o consumo elétrico em até 80%; implementação de vidros verdes; sistema de controle de temperatura – gera economia com o ar-condicionado; sistema de conversão calor em energia.
 
-XSD
+Para a redução de custos em serviços, a automatização da segurança e portaria são soluções estratégicas. A portaria eletrônica inteligente Condomínio Conectado, se destaca em termos de tecnologia e custo-benefício.C"
 
-- XSD - XML Schema Definition
-- É um schema no formato XML usado para definir a estrutura de dados que será validada em XML
-- o XSD funciona como uma documentação de como deve ser montado o SOAP Message (XML) que será enviado através de Web Service.
+Fonte: https://gscseguranca.com.br/novidades/o-que-sao-edificios-inteligentes-smart-building/
 
 
-SOAPUI 
+Wearables
 
-http://soapclient.com/xml/soapresponder.wsdl
+Wearables, tecnologia vestível ou simplesmente vestíveis é um termo geral para um grupo de dispositivos móveis, como relógios, fones de ouvido, óculos de realidade aumentada e aparelhos para atividades físicas, projetados para serem utilizados como acessórios ou ao longo do dia.
 
-<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.SoapClient.com/xml/SoapResponder.wsdl" xmlns:xsd1="http://www.SoapClient.com/xml/SoapResponder.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
-   <SOAP-ENV:Body>
-      <mns:Method1Response SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mns="http://www.SoapClient.com/xml/SoapResponder.xsd">
-         <bstrReturn xsi:type="xsd:string">Your input parameters are Teste and Teste 2</bstrReturn>
-      </mns:Method1Response>
-   </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>
+Fonte: https://www.ecycle.com.br/wearables/
 
-RESULTADO DO TESTE DA AULA ACIMA.
+RFID SUPPLY CHAIN
 
- Aprenda o que é REST, API e JSON
+Um dos campos férteis para a aplicação da tecnologia RFID é na gestão da cadeia logística (Supply Chain Management). As funcionalidades do RFID permitem desenvolver aplicações logísticas mais flexíveis e inteligentes. Neste artigo vamos abordar as diversas possibilidades e benefícios da aplicação do RFID na logística
 
-- o que é REST
-- Vantagens em se utilizar REST
-- O que é API
-- Entendendo os métodos utilizados pelo REST
-- Estrutura de um REST
-- Estrutura de um JSON
+Fonte: https://cio.com.br/tendencias/rfid-na-gestao-da-cadeia-logistica/#:~:text=Um%20dos%20campos%20férteis%20para,aplicação%20do%20RFID%20na%20logística.
 
- REST
+Computação Ubíqua
 
-- REST - Representational State Transfer. "Transferência de Estado Representacional"
-- É um estilo de arquitetura de software que define a implementação de um serviço web. Designer de Arquitetura para serviço WEB.
-- Podem trabalhar com os formatos XML, JSON ou outros. Emel, Texto Puro.....
+Oriundo do termo inglês Ubiquitous Computing ou Ubicomp, a Computação Ubíqua, também chamada de Computação Pervasiva e UbiComp, descreve a presença direta e constante da informática e tecnologia na vida das pessoas, em suas casas e ambientes de convívio social.
 
- VANTAGENS
+Fonte: https://www.infoescola.com/informatica/computacao-ubiqua/#:~:text=Oriundo%20do%20termo%20inglês%20Ubiquitous,e%20ambientes%20de%20convívio%20social.
 
-- Permite integrações entre aplicações e também entre cliente e servidor em páginas web e aplicações.
-- Utiliza método HTTP para definir operação que está sendo efetuada.
-- Arquitetura de muito facil compreensão.
+Desafios da internet das coisas
 
-Estrutura do REST
+1. Privacidade e segurança
+2. Quantidade exponencial de dispositivos conectadas na rede
+3. Ser capaz de processar e armazenar um enorme quantidade de informações
+4. Gerar valor a partir dos dados
 
-- Cliente>: Pode ser outro aplicação integrando, aplicativo de celular integrando, faz uma requisição HTTP (GET, POST, PUT, DELETE...)
-- Servidor>: Retorna um código de operação. Retorna mensagem (Texto, Json, XML....)
 
-Quando outra aplicação web disponibiliza um conjunto de rotinas e padroes para serviços web podemos chamar este serviço de API
+[FASE-2]
 
- API
+ARQUITETURA DA INTERNET DAS COISAS 
 
-- API - Application Programming Interface.
-- São conjuntos de rotinas documentadas e disponibilizados por uma aplicação para que outras aplicações possam consumir suas funcionalidades.
-- Ficou popular com o aumento dos serviços web.
-- As Maiores plataformas de tecnologia disponibilizam APIs para acessos de suas funcionalidade, algumas delas são: Facebook, Twitter, Telegram, Whatsapp e Github.
+Problema a resolver 
 
- PRINCIPAIS METODOS HTTP
+Fonte: https://www.redhat.com/pt-br/topics/cloud-computing/what-is-cloud-architecture
 
-- GET - Solicita a representação de um recurso
-- POST - Solicita a criação de um recurso
-- DELETE - Solicita a exclusão de um recurso
-- PUT - Solicita a atualização de um recurso
 
- JSON
+Considere esses atributos na escolha
 
-- JSON - JavaScript Objetct Notation.
-- Formatação leve utilizada para troca de mensagens entre sistemas.
-- Usa-se de uma estrutura de chave e valor e também de listas ordenadas.
-- Um dos formatos mais utilizados e populares para troca de mensagens entre sistemas.
+Baixo consumo de energia
+Rede de dados limitado
+Resiliencia
+Segurança
+Customização
+Baixo Custo
 
- ESTRUTURA BASICA JSON
+Arduino 
 
-{
-   "nome": "Os Vingadores",
-   "ano_lancamento": "2019",
-   "personagens":[
-      {
-         "nome": "Thanos"
-      },
-      {
-         "nome": "Homem de Ferro"
-      },
-      {
-         "nome": "Thor"
-      }
-   ]
+Plataforma de Prototipagem 
+Com entradas/saídas 
+Desenvolvedor escreve em C/C++
+Interface Serial ou USB
+Shield
+
+[Arduido]
+void setup () {
+   pinMode (LED_PIN, OUTPUT);    // Habilita o pino 13 para saida digital (OUTPUT). 
 }
 
-Veja sobre integração com REST e métodos HTTP na prática.
+void loop () {
+   digitalWrite (LED_PIN, HIGH)  // Liga o LED.
+   delay (1000);                 // Espera 1 segundo (1000 milissegundos).
+   digitalWrite (LED_PIN, LOW);  // Desliga o LED.
+   delay (1000);                 // espera 1 segundo. 
+}
 
-OBJETIVOS 
-
-- Integração com serviços REST
-- Métodos HTTP na prática 
-- Código de Estado HTTP 
-
-CÓDIGO DE ESTADO 
-
-- Usado pelo Servidor para avisar o cliente sobre o estado da operação solicitada
-- 1xx - Informativo > Requisição de processo e aviso sem resposta, sem garantia
-- 2xx - Sucesso > Solicitação foi recebida e processada com sucesso
-- 3xx - Redirecionamento > Usuario faz requisição de alteração 
-- 4xx - Erro do Cliente > Quem fez a requisição colocou alguma informação incorreta EXEMPLO: "404 NOT FOUND",
-- 5xx - Erro do Servidor > Na hora de processar pode enviar um aviso notificando o suporte.
-
-Respostas de informação (100-199),
-Respostas de sucesso (200-299),
-Redirecionamentos (300-399)
-Erros do cliente (400-499)
-Erros do servidor (500-599).
-
-https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
-
-Informações dos erros ESTADOS
+int main(void)
+{
+   //Define o LED_PIN 13 
+   int LED_PIN = 13;
+   init();
+   setup();
+   for (;;)
+       loop ();
+   return 0;
+}
 
 
-Aula Pratica usando o Postman...
+EMBARCADOS 
 
-Observando como funciona os comandos.
+[MCUs]
+
+Microcontrolador de chip único 
+Sistema operacional real time
+Embarcado
+Uso industrial,médico, militar, transporte
+
+Microcontrolador é um pequeno computador num único circuito integrado o qual contém um núcleo de processador, memória e periféricos programáveis de entrada e saída. A memória de programação pode ser RAM, NOR flash ou PROM a qual, muitas vezes, é incluída no chip
+
+Fonte: https://pt.wikipedia.org/wiki/Microcontrolador
+
+Minicomputadores
+
+Computador completo 
+Hardware integrado em uma única placa
+Roda SO LINUX ou Windows 
+Uso dómestico e comercial
+
+[RaspberryPi]
+
+O que é a Raspberry Pi?
+
+A Raspberry Pi é um computador de placa única do tamanho de um cartão de crédito (ou até menor, dependendo do modelo). Quando ela é conectada a um monitor, mouse e teclado, a RPi funciona como um computador desktop.
+
+Protocolo de comunicação
+
+
+Smartphone Carro Taxi 
+Gps Tracker Carro Taxi  
+Smartphone Carro Taxi           > [CLOUD
+Smartphone Carro Taxi  
+Gps Tracker Carro Taxi   
+
+O Protocolo MQTT
+
+Fonte: https://www.hitecnologia.com.br/blog/o-que-e-protocolo-mqtt/
+
+[MQTT]
+
+Base na pilha TCP/IP
+Protocolo de mensagem assíncrona (M2M)
+Criado pela IBM para conectar sensores de pipelines de petróleo a satélites
+Padrão OASIS suportado pelas linguagens de programação mais populares
+
+Modelo Publish/Subscribe 
+
+Fonte: https://docs.microsoft.com/pt-br/azure/architecture/patterns/publisher-subscriber
+
+O modelo Publish/Subscriber, também conhecido como pub/sub, recurso este presente no MQTT é um padrão para troca de mensagens que funciona de forma desacoplada, isso significa que publicador e assinante podem interagir sem que um conheça o outro, basta que ambos conheçam o evento
+
+Fonte: https://blogmasterwalkershop.com.br/outros/protocolo-mqtt-publish-subscriber-parte-01
+
+
+[FASE-3]
+
+A FLEXIBILIDADE DOS TÓPICOS 
+
+mqtt       ://     broker.io        ://       a6g319       ://     gps    ://    position 
+PROTOCO             BROKER                USER IDENTIFIER         SENSOR       INFORMATION TYPE
+
+mqtt://broker/user/accelerometer
+mqtt://broker/user/gps/position
+mqtt://broker/user/gps/velocity
+
+O broker é o elemento responsável por gerir as publicações e as subscrições do protocolo MQTT. Ele é como uma espécie de mediador entre as máquinas, capaz de fazer com que a comunicação de fato ocorra entre elas. O broker permite um desacoplamento entre as partes, novidade entre esse tipo de sistema.
+
+O broker é um grande servidor que recebe todas as mensagens dos seus clientes e envia essas mensagens aos clientes de destino – e como exemplo, alguns clientes podem ser desde sensores IoT ou até uma aplicação que recebe os dados dos sensores e os processa.
+
+sub mqtt://broker/a644/accelerometer
+sub mqtt://broker/a5445564/gps/position
+sub mqtt://broker/f458/gps/velocity
+
+QoS
+
+MQTT Client  <>  Publish  <>  MQTT Broker
+
+Nivel minimo de menor esforço
+Sem garantia de entrega
+Mensagem não é retransmitida
+
+QoS 1 - 2
+
+MQTT Client  <>  Publish  <>  MQTT Broker
+
+Garante que a mensagem foi entregue no minimo uma vez ao receber.
+Mensagem pode ser retransmitida se não houver confirmação de entrega.
+
+O QoS (Quality of Service, em inglês) é uma tecnologia presente em roteadores para garantir ao usuário maior controle sobre sua rede Wi-Fi. Por meio da ferramenta, é possível determinar quais dispositivos e serviços terão maior prioridade de conexão.
+
+Fonte: https://www.techtudo.com.br/noticias/2018/07/o-que-e-qos-entenda-para-que-serve-a-tecnologia-em-roteadores.ghtml
+
+[Cloud]
+
+De uma forma simples, cloud computing, ou computação na nuvem, é uma tecnologia que permite acesso remoto a softwares, armazenamento de arquivos e processamento de dados por meio da internet. É uma alternativa para você acessar dados importantes de qualquer computador, em qualquer lugar.
+
+Quem usa a computação em nuvem? Organizações de todos os tipos, portes e setores usam a nuvem para uma grande variedade de casos de uso, como backup de dados, recuperação de desastres, e-mail, desktops virtuais, desenvolvimento e teste de software, análises de big data e aplicativos web voltados ao cliente.
+
+Fonte: https://www.mandic.com.br/cloud/ 
+
+Data Store: Armazena cada posição geografica recebida identificada usuário. data e hora permitindo reconstruir rotas inteiras.
+
+Data Store < Worker < Broker > Worker > Chace > Client 
+
+Client: Apresenta em tempo real a última posição de cada usuário no mapa e quantidade de usuários por hora.
+
+[BROKER] -> [WORKER] -> [DATA-STORE]
+Documento DB 
+Relacional DB
+[
+   {
+      "user" "xxxxx",
+      "timestamp" "xxxxx",
+      "lat" "xxxxx",
+      "lon" "xxxxx",
+   },
+   {
+      "user" "xxxx",
+      "timestamp" "xxxxx",
+      "lat" "xxxxxx",
+      "lon" "xxxx",
+   },
+   {
+      "user" "xxxxx",
+      "timestamp" "xxxxx",
+      "lat" "xxxx",
+      "lon" "xxxxx",
+   },
+]
+
+
+[FASE-4]
+
+ESTUDO DE CASO 
+
+
+         ?            ?           ?
+GPS -> BROKER  -> WORKER  -> DATA-STORE
+
+Arquitetura é escolha.
+
+Prova de Conceito 
+
+APP ANDROID -> ECLIPSE MOSQUITTO Node.JS -> Banco de dados -> MySQL
+
+Fonte: https://mosquitto.org
+
+Eclipse Mosquitto é um agente de mensagens de software livre (licenciado por EPL / EDL) que implementa o protocolo MQTT versões 5.0, 3.1.1 e 3.1. O Mosquitto é leve e adequado para uso em todos os dispositivos, desde computadores de placa única de baixa potência até servidores completos.
+
+
+Mínimo Produto Viável 
+
+GPS Embarcado -> HiveMQ -> Akka Scala JVM -> Banco de Dados noSQL
+
+HiveMQ
+Os aplicativos IoT podem gerar MUITOS dados. É fundamental selecionar uma tecnologia projetada para mover dados de IoT entre redes e plataformas de nuvem. O broker MQTT da HiveMQ é projetado para implementações nativas da nuvem para fazer o uso ideal dos recursos da nuvem. Seu uso de MQTT reduz a largura de banda da rede necessária para mover dados. Soluções eficientes de IoT significam custos totais de operação mais baixos.
+
+
+Akka Scala JVM
+Akka é um kit de ferramentas para a construção de aplicativos orientados a mensagens altamente concorrentes, distribuídos e resilientes para Java e Scala
+
+
+Banco de Dados noSQL
+Os bancos de dados NoSQL (ou não-relacionais) utilizam um padrão diferente de armazenamento em relação ao SQL. O grande diferencial dessa tecnologia é a capacidade de escalabilidade para as operações das empresas de uma forma mais simples e econômica do que no banco relacional.
+
+
+Solução 
+
+GPS Embarcado -> AWS IoT Core -> AWS Kinesis Firehose -> AWS S3
+
+
+AWS IoT Core
+A AWS oferece serviços e soluções de Internet das Coisas (IoT) para conectar e gerenciar bilhões de dispositivos. ... De conectividade de dispositivo seguro a gerenciamento, armazenamento e análise, o AWS IoT tem os serviços abrangentes e altamente especializados de que você precisa para criar soluções completas.
+
+
+AWS Kinesis Firehose
+O Amazon Kinesis Data Firehose é um serviço totalmente gerenciado que provisiona, gerencia e escala automaticamente recursos de computação, memória e rede necessários para processar e carregar dados de streaming.
+
+AWS S3
+O Amazon Simple Storage Service (Amazon S3) é um serviço de armazenamento de objetos que oferece escalabilidade, disponibilidade de dados, segurança e performance líderes do setor. Você pode utilizar o Amazon S3 para armazenar e recuperar qualquer volume de dados, a qualquer momento, de qualquer lugar na Web.
 
 
 
+GPS Embarcado -> AWS IoT Core -> AWS Data Stream -> AWS Lambda -> AWS ElasticCache Redis
 
-
-
-
-
+AWS ElasticCache Redis -> AWS EC2 -> FeathersJS backend -> Dashboard
