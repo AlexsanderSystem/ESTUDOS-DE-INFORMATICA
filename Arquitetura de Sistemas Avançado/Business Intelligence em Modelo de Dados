@@ -1,0 +1,54 @@
+Professor: Laureano Marcelo Gilioli
+Engenheiro de Dados
+
+Objetivos da Aula 
+1. Business Intelligence em modelos de dados 
+2. Data Warehouse
+3. BigData - dados não estruturados
+4. Data Lake
+
+Requisitos basicos 
+
+ - Conhecimentos de banco de dados
+ - Conhecimentos de Lógica
+ 
+BI - Business Intelligence
+O BI é composto praticamento por :
+Ferramentas,
+infraestrutura,
+Profissionais(corpo tecnico),
+Dados,
+
+BI - DATA
+
+Sistema SGBD - Sistema de operação (dados)
+
+Dados do sistema implementando com elemento externo BI - DATA, Dados gerenciais da empresa, informação imputada por outro gerente,
+são dados gerados por sistema exerno e não de operação.
+
+DADOS DA OPERAÇÃO
+PESQUISA DE CAMPO
+INDICADORES DE MERCADO
+DADOS GERENCIAIS
+
+BI - Solution
+
+Infraestrutura
+Gerenciamento dos dados
+Analytics
+Compartilhamento de dados
+Ferramentas gerais, controle de acesso, redundancia falha, inteligencia artificial.
+
+BI - FERRAMENTAS
+
+QlikView
+Domo
+Spotfire
+ORACLE
+MicroStrategy
+SapBusinessObjects
+Alik Sense
+Tableau
+Power BI
+IBM Cognos Analycts 
+sas
