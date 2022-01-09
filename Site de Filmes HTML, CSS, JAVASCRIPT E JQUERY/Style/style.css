@@ -1,0 +1,118 @@
+:root {
+    --preto: BLACK;
+    --vermelho: #e50914;
+    --branco: WHITE;
+}
+
+* {
+    margin: 0;
+    padding: 3;
+    box-sizing: border-box;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    background-color: var(--preto);
+    font-family: 'Arial', Times, Serif;
+    color: white;
+}
+
+header .logo {
+    margin-left: 0px;
+    color: #e50914;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 70px;
+}
+
+header nav a {
+    text-decoration: 0;
+    color: #AAA;
+    margin-right: 100%;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+header nav a:hover {
+    color: #AAA;
+}
+
+.pagina-principal {
+    font-size: 17px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+        url("/img/capa.jpg");
+
+    height: 400px;
+    /*Tamanha da Imagem*/
+    background-size: cover;
+    /*Manter a imagem centralizada */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.pagina-principal .descricao {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.titulo-filme {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+/* vermelho verde e azul*/
+.botao {
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+
+    padding: 10px 30px;
+    margin-right: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .4s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color: var(--preto);
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 30px
+}
+
+.filme-principal .container {
+    width: 40%;
+}
+
+.box-filme {
+    height: 30%;
+    width: 30%;
+    display: none;
+    cursor: pointer;
+
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+
+
