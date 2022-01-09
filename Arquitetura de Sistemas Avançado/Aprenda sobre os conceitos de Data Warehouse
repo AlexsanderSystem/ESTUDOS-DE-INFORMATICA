@@ -1,0 +1,103 @@
+Professor: Laureano Gilioli
+DBA
+
+
+DATA WAREHOUSE 
+
+OLTP x OLAP
+
+OLTP:
+ONLINE TRANSACTION PROCESSING.:
+Muitos usuarios, varios sistemas, transações ao mesmo tempo.
+
+                                      Visão Geral
+                                      
+Foco:
+
+Foco no nivel operacional da organização, Visa a execução operacional do negocio.
+
+Perfomance:
+
+Alta velocidade na manuntenção de dados operacionais, pórem ineficientes para geração de análises gerenciais.
+
+Estrutura dos dados:
+
+Os dados são normalmente estruturados em um modelo relacional normalizado, otimizado para a utilização transacional, os dados possuem alto nivel de detalhe. 
+
+Armazenamento:
+
+O Armazenamento é feito em sistemas convencionais de banco de dados através dos sistemas de informações da organização.
+
+abrangência:
+
+É utilizado por tecnicos e analistas e engloba varios usuarios da organização.
+
+Frequência de atualização:
+
+A atualização de dados é feito no momento da transação. Frêquencia muito alta de atualizações.
+
+Volatibilidade:
+
+Dados Volateis e passiveis de manuntenção e exclusão.
+
+Tipo de permissões nos dados:
+
+Podem ser feito leitura, inserção, modificação e exclusão dos dados.
+
+
+Select/Update/Insert
+Where Profissao = 1
+and Genero = "M"
+
+
+
+
+
+x
+
+OLAP:
+On-line Analytical Processing
+Redução de usuarios, equipe gerencial.
+
+                                      Visão Geral
+                                      
+Foco:
+
+Foco no nivel estrategico da organização. Visa a analise empresarial e tomada de decisão.
+
+Perfomance:
+
+Otimização para a leitura e geração de analises e relatorios gerenciais.
+
+Estrutura dos dados:
+
+Os dados estão estruturados na modelagem dimensional. Os dados normalmente possuem alto nivel de sumarização.
+
+Armazenamento:
+
+O Armazenamento é feito em estruturas de Data Warehouse com otimização no desempenho em grandes volumes de dados.
+
+abrangência:
+
+É utilizado pelos gestores e analistas para tomada de decisão.
+
+Frequência de atualização:
+
+A atualização das informações é feita no processo de carga do dados. Frequência baixa , podendo ser diária, semanal, mensal ou anual (ou criterio especifico).
+
+Volatibilidade:
+
+Dados historicos e não voláteis Os dados não sofrem alteração, salvo necessidade especificas (por motivos de erros ou inconscintencia de informações).
+
+Tipo de permissões nos dados:
+
+É permitido apenas a inserção e leitura. Sendo que para o usuario está apenas o disponivel a leitura.
+
+
+
+Select/Update/Insert
+SUM/AVG/MIM/MAX/MED
+Group by Column
+
+
+
