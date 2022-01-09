@@ -1,0 +1,27 @@
+body {
+    background: #d5d5d5;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+header {
+    margin-top: 100px;
+}
+
+footer {
+    margin-bottom: 200px;
+    text-align: center;
+}
+
+h2 {
+    color:tomato;
+    font-family: fantasy;
+}
+
+img {
+    margin-top: 20px;
+}
+
+.img_padrao {
+    margin-bottom: 5px;
+}
