@@ -2,3 +2,43 @@ PROFESSOR: Laureano Gilioli
 DBA
 
 O que é Big Data e dados não estruturas
+
+Origem: Wikipédia, a enciclopédia livre.
+Os dados semiestruturados são uma forma de dado estruturado que não está de acordo com a estrutura formal dos modelos de dados associados com bancos de dados relacionais ou outras formas de tabelas de dados, mas que contém tags ou outros marcadores para separar elementos semânticos e impor hierarquias de registros e campos dentro dos dados.
+
+Em um banco de dados semiestruturado, as informações são guardadas e manipuladas na forma de XML, por exemplo, ao invés de tabelas.
+
+O que são dados estruturados semi estruturados e não estruturados?
+Os dados estruturados são organizados em um padrão fixo e constante, seguem uma estrutura mais rígida. ... E os dados semiestruturados, estão posicionados entre os extremos, não possuem uma forma rígida, mas também não são totalmente sem qualquer estrutura.
+
+Qual das alternativas a seguir é um exemplo de dados não estruturados?
+Imagens, assim como vídeos ou arquivos de áudio, são também exemplos de dados não estruturados. Assim, é fácil concluir que as redes sociais, as quais possuem um enorme volume de dados, como textos, imagens e vídeos criados diariamente por usuários, representam outro exemplo de dados não estruturados.
+
+Nome: Leandro Pinho Monteiro
+
+E-mail: leandro@mentalguild.com.br
+
+Rua Siqueira Bueno, 1134, Mooca, São Paulo.
+
+Agora, pensem nesses dados não-estruturados transpostos para um arquivo XML. O conteúdo da arquivo ficará ssim:
+
+<?xml version=”1.0″ encoding=”UTF-8″ ?>
+
+<cadastro>
+
+<nome>Leandro Pinho Monteiro</nome>
+
+<e-mail>leandro@mentalguild.com.br</e-mail>
+
+<endereço>Rua Siqueira Bueno, 1134, Mooca, São Paulo</endereço>
+
+</cadastro>
+
+A primeira linha serve para avisar que o arquivo contém uma estrutura XML e que usa codificação de caracteres unicode.
+
+Outros exemplos de arquivos com dados semi-estruturados:
+
+JSON – Javascript Object Notation,
+RDF – Resource Description Framework,
+OWL – Web Ontology Language.
+Dados semi-estruturados possuem também outras classificações internas e características
