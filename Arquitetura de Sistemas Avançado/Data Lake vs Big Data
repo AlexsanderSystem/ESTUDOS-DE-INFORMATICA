@@ -1,0 +1,64 @@
+https://www-forbes-com.translate.goog/sites/edddumbill/2014/01/14/the-data-lake-dream/?sh=386cdbe469c0&_x_tr_sl=auto&_x_tr_tl=pt&_x_tr_hl=pt
+
+Em 2013, passei muito tempo falando sobre o desenvolvimento do Hadoop para ser um destino central para dados . O Hadoop pode entrar em uma organização para um caso de uso específico, mas dados atraem dados. Uma vez na porta, o Hadoop tende a se tornar um centro de gravidade. Esse efeito é amplificado pelo apelo do big data não apenas pelo tamanho dos dados, mas pela agilidade que ele traz para uma organização .
+
+No entanto, para existir dessa maneira, o Hadoop precisa de mais do que apenas um mecanismo de processamento de dados e um pequeno exército de programadores Java dispostos. Deve se tornar uma plataforma corporativa que suporte o desenvolvimento de aplicativos. No final de 2013, todos os principais fornecedores de Hadoop haviam formulado uma estratégia de plataforma: seja o Cloudera Enterprise Data Hub ou Hortonworks Data Platform .
+
+Uma frase em particular se tornou popular para descrever a concentração de dados no Hadoop, o "Data Lake", e, de fato, esse termo foi adotado pela Pivotal para sua estratégia de big data empresarial.
+
+PROMOTED
+
+
+
+
+Mas o que os fornecedores de big data querem dizer com isso?
+
+O sonho do data lake é um local com arquitetura centrada em dados, onde os silos são minimizados e o processamento acontece com pouco atrito em um ambiente escalável e distribuído. Os aplicativos não são mais ilhas e existem dentro da nuvem de dados, aproveitando o acesso de alta largura de banda aos dados e recursos de computação escaláveis. Os dados em si não são mais restringidos pelas decisões iniciais do esquema e podem ser explorados mais livremente pela empresa.
+
+Eu chamo isso de sonho, porque temos um caminho a percorrer para tornar a visão realidade. É, no entanto, um sonho acessível.
+
+Eu me propus a descrever os quatro níveis de maturidade do Hadoop que nos levam ao sonho do data lake. A partir desses níveis, podemos ver onde estão os fornecedores de Hadoop de hoje e entender onde estão nossas próprias organizações.
+
+Quatro níveis de maturidade do Data Lake
+(1) Vida antes do Hadoop
+
+Estágio 1
+
+Os aplicativos ficam sozinhos com seus bancos de dados
+Alguns aplicativos contribuem com dados para um data warehouse
+Os analistas executam relatórios e análises no data warehouse
+(2) O Hadoop é introduzido
+
+Estágio 2
+
+Os aplicativos contribuem com dados para o Hadoop
+Hadoop executa tarefas MapReduce em lote
+Hadoop usado para ETL em bancos de dados de warehouse ou analíticos
+Dados do Hadoop reintroduzidos em aplicativos
+(3) Crescendo o Data Lake
+
+Estágio 3
+
+Os sistemas recém-construídos se concentram no Hadoop por padrão
+Os aplicativos usam os dados uns dos outros via Hadoop
+Uso interativo do Hadoop como bancos de dados no Hadoop implantados (por exemplo, Impala, Greenplum, Spark)
+Hadoop torna-se um destino de dados padrão, governança e metadados tornam-se importantes
+O uso de data warehouse torna-se a exceção, onde os requisitos herdados ou especiais ditam
+Fontes de dados externas integradas via Hadoop
+(4) Data Lake e Nuvem de Aplicativos
+
+Estágio 4
+
+Novos aplicativos são criados em uma plataforma de aplicativos Hadoop ao redor do data lake
+O Hadoop amadurece como uma plataforma elástica de computação de dados distribuídos, para funções operacionais e analíticas
+Data lake adiciona camadas de segurança e governança
+A disponibilidade de dados aumenta, o tempo de implantação do aplicativo diminui
+Alguns aplicativos ainda têm necessidades especiais ou legadas e são executados de forma independente
+Conclusão
+Uma visão é necessariamente voltada para o futuro. Na realidade, muitas organizações estão apenas começando a chutar os pneus do Hadoop. Das empresas que estão usando o Hadoop, a maioria está nos estágios iniciais desse processo no nível (2), com alguns pioneiros vivendo no nível (3). Essas organizações são grandes o suficiente para enfrentar e investir em soluções para desafios que os fornecedores ainda não enfrentaram, como gerenciamento de proveniência, descoberta de dados e segurança refinada.
+
+Alguém já vive o sonho plenamente? Indiscutivelmente, sim, as infra-estruturas internas desenvolvidas na o Google e o Facebook certamente oferecem a seus desenvolvedores as vantagens e a agilidade do sonho do data lake.
+
+Os próprios fornecedores de software de big data estão inaugurando os estágios iniciais do nível (3), com o foco para 2014 sendo o desenvolvimento de aplicativos. Vemos novas empresas, como Continuuity e Pivotal , abordando a experiência do desenvolvedor para big data.
+
+Independentemente de onde você está agora, reserve um tempo para olhar para o futuro. Estamos em uma jornada para conectar dados corporativos. À medida que os negócios são cada vez mais digitais, o acesso aos dados se tornará uma prioridade crítica, assim como a velocidade de desenvolvimento e implantação. O data lake é um sonho que pode atender a essas demandas.
