@@ -1,0 +1,22 @@
+IaaS hardware e internet
+Qual o conceito de IaaS?
+IaaS (Infrastructure as a Service)
+A IaaS fornece servidores, rede, sistemas operacionais e recursos de armazenamento de dados, por meio da tecnologia de virtualização. ... Ou seja, o IaaS fornece as mesmas tecnologias e recursos que um Data Center tradicional, porém sem precisar manter ou gerenciar fisicamente tudo isso.
+
+Paas auto scale on the go
+
+
+Baas não há backend service
+
+Kubernets K8S
+Multiplos nodos
+Load balancer
+
+
+Serverless
+
+Sem servidor
+Sem serviço "rodando"
+Sem down time
+
+
