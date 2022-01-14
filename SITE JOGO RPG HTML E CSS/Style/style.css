@@ -1,0 +1,228 @@
+:root {
+    --preto: #222;
+    --vermelho: #e50914;
+    --branco: WHITE;
+}
+
+* {
+    margin: 0;
+    padding: 3;
+    box-sizing: border-box;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    background-color: var(--preto);
+    font-family: 'Arial', Times, Serif;
+    color: white;
+}
+
+header .logo {
+    margin-left: 0px;
+    color: #e50914;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 70px;
+}
+
+/*Menu preso no topo*/
+
+
+.FixoNoTopo {
+    position: fixed;
+    top: 0px;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+
+
+
+header nav a {
+    text-decoration: 0;
+    color: #AAA;
+    margin-right: 100%;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+header nav a:hover {
+    color: #AAA;
+}
+
+.video-principal {
+    font-size: 17px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+        url("/img/fundo\ \(2\).jpg");
+
+    height: 400px;
+    /*Tamanha da Imagem*/
+    position: cover;
+    font-size: 14px;
+    left: 0px;
+    top: 0px;
+    background-size: cover;
+    /*Manter a imagem centralizada */
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.video-principal .descricao {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.titulo-site {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+/* vermelho verde e azul*/
+.botao {
+    background-color: rgba(57, 58, 52, 0.5);
+    border: none;
+    color: white;
+
+    padding: 1px;
+    margin-right: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .4s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color: var(--preto);
+}
+
+.botao i {
+    margin-right: 10px;
+}
+
+.container {
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.box-fotos {
+    height: 30%;
+    width: 30%;
+    display: none;
+    cursor: pointer;
+
+}
+
+.carrosel-fotos {
+    margin-top: 5px;
+    cursor: pointer;
+    left: 420px;
+    top: 170px;
+    max-height: 300px;
+    width: 100%;
+
+}
+
+.logo {
+    left: 100%;
+    top: 100%;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+
+}
+
+
+#corpo video {
+    width: 750px;
+    top: 200;
+    margin: 0 auto;
+    display: block;
+    padding: 20;
+}
+
+.subtitle {
+    font-family: 'Tangerine';
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.fundo-historia {
+    font-size: 17px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 100%),
+        url("/img/img1.png");
+    width: 100%;
+    height: 10%;
+    /*Tamanha da Imagem*/
+    position: cover;
+    font-size: 14px;
+    left: 0px;
+    top: 0px;
+    background-size: cover;
+    /*Manter a imagem centralizada */
+    background-position: center center;
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.text-all {
+    font-family: 'Tahoma';
+    max-width: 1000px;
+    font-size: 14px;
+}
+
+.menu {
+    margin-right: 0;
+}
+
+h1 {
+    color: #e50914;
+}
+
+.center {
+    color: #e50914;
+}
+
+.title {
+    color: #e50914;
+}
+
+#toc-list {
+    margin: 0px 0;
+    color: rgb(218, 240, 24);
+}
+
+.indice {
+
+    border: none;
+    color: white;
+
+    padding: 1px;
+    margin-right: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .4s ease all;
+}
+
+.indice i {
+    margin-right: 10px;
+}

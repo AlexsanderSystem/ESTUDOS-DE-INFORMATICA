@@ -1,0 +1,43 @@
+body {
+  font-size: 15px;
+}
+
+.navbar {
+  background-color: #1e8449;
+  height: auto;
+  width: auto;
+  padding-bottom: 0%;
+}
+
+.quem-somos {
+  background-color: #e67e22;
+}
+
+.margin {
+  padding-top: 2px;
+  padding-bottom: 40px;
+}
+
+.parceiros {
+  background-color: #5dade2;
+}
+
+.nav-item {
+  padding-top: 10px;
+}
+
+.msg1 {
+  color: beige;
+}
+
+.servicos {
+  background-color: #1e8449;
+}
+
+.bg-footer {
+  background-color: white;
+  padding-bottom: 0%;
+}
+
+.cor1{background-color:white}
+.cor2{background:black}
